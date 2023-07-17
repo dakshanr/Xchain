@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCHAIN</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body class="container p-5 mb-2 bg-black text-white">
+        <div class="title" style="text-align: center; line-height: 5pt; padding-top: 30pt;">
+            <img src="images/xc-logo-transparent.svg" style="width: 40pt; height: 40pt;" alt="Xchain Logo">
+            <h2>Xchain</h2>
+            <small style="font-size: 15px; color: rgb(211, 209, 209);">Crypto Converter</small>
+            <br>
+            <br><br><br><br>
+        </div>
+        <div id="cryptoConverter" style="background-color:black; padding: 25px 20px; border-radius: 20px; box-shadow: 0 0px 12px 0.1px rgb(112, 126, 138); ">  
+            <button id="refreshbutton" style="background-color: inherit; border: none; margin-bottom: 20px;">
+                <img id="refresh" src="images/refresh.svg" style="width: 12pt;" alt="Refresh">
+            </button>
+                <div style="text-align: center;">
+                    <table style="text-align: center;">
+                        <tr>
+                            <td style="text-align: left;">
+                            <label style="color: rgb(195, 194, 194); font-size: 15px;" for="fromAmt">From</label>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="form-control mx-auto w-auto bg-dark text-white border-secondary" id="fromAmt" type="number" min="0" value="1.00000" autofocus>
+                            </td>
+                            <td>
+                            <select class="form-select mx-auto w-auto bg-dark text-white border-secondary" id="fromCurr">
+                                <option>ETH</option>
+                                <option>SOL</option>
+                                <option>BTC</option>
+                                <option>MATIC</option>
+                                <option>BNB</option>
+                                <option>USD</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;  font-size: 15px;" class="text-muted">
+                                <small>1 </small>
+                                <small id="from-c">ETH</small>
+                                <small> = </small>
+                                <small id="from-v">x</small>
+                                <small> USD</small>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px;" colspan="2">
+                                <button id="swapbutton" style="background-color: inherit; border: none;">
+                                    <img id="swap" src="images/swap.svg" style="width: 18pt;" alt="Swap">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">
+                                <label style="color: rgb(195, 194, 194); font-size: 15px;" for="toAmt">To</label>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input class="form-control mx-auto w-auto bg-dark text-white border-secondary" id="toAmt" type="number" min="0" value="">
+                            </td>
+                            <td>
+                            <select class="form-select mx-auto w-auto bg-dark text-white border-secondary" id="toCurr">
+                                <option>ETH</option>
+                                <option>SOL</option>
+                                <option selected>BTC</option>
+                                <option>MATIC</option>
+                                <option>BNB</option>
+                                <option>USD</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-size: 15px;" class="text-muted">
+                                <small>1 </small>
+                                <small id="to-c">SOL</small>
+                                <small> = </small>
+                                <small id="to-v">x</small>
+                                <small> USD</small>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                    </table>
+                </div>        
+
+        </div>
+        <footer class="mb-5 small text-white">
+            <br>
+            <div class="text-muted" style="line-height: 30pt;">
+                Made with 🫘 by 
+            <a href="https://twitter.com/rama0x1" style="color: rgb(115, 167, 213);">
+                Rama
+            </a>
+            </div>
+            <div class="text-muted" style="text-align: center; line-height: 1pt;">
+                Powered by 
+            <a href="https://coingecko.com/">
+                <img src="images/coingecko.svg" style="height: 20px;" alt="CoinGecko logo">
+            </a>
+            </div>
+        </footer>
+    </body>
+</html>
